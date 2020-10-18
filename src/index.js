@@ -126,7 +126,7 @@ class Josh {
     } else {
       value = await this.provider.get(key);
     }
-    value = this.deserializer ? this.deserializer(value, key, path.join('.')) : value;
+    value = this.deserializer ? this.deserializer(value, key, path) : value;
     return path.length ? _get(value, path) : value;
   }
 
